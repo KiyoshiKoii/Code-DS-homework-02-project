@@ -64,17 +64,18 @@ Bộ dữ liệu bao gồm các nhóm đặc trưng chính:
 Mô hình được xây dựng dựa trên nền tảng toán học:
 
 1.  **Hàm Sigmoid (Activation Function):**
-    $$ \sigma(z) = \frac{1}{1 + e^{-z}} $$
+    $\sigma(z) = \frac{1}{1 + e^{-z}}$
 
 2.  **Hàm giả thuyết (Hypothesis):**
-    $$ h_\theta(x) = \sigma(\theta^T x + b) $$
+    $h_\theta(x) = \sigma(\theta^T x + b)$
 
 3.  **Hàm mất mát (Binary Cross-Entropy Loss):**
-    $$ J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log(h_\theta(x^{(i)})) + (1-y^{(i)}) \log(1-h_\theta(x^{(i)}))] $$
+    $J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log(h_\theta(x^{(i)})) + (1-y^{(i)}) \log(1-h_\theta(x^{(i)}))]$
 
 4.  **Cập nhật trọng số (Gradient Descent):**
-    $$ \theta_j := \theta_j - \alpha \frac{\partial J}{\partial \theta_j} $$
-    $$ b := b - \alpha \frac{\partial J}{\partial b} $$
+    $\theta_j := \theta_j - \alpha \frac{\partial J}{\partial \theta_j}$
+    
+    $b := b - \alpha \frac{\partial J}{\partial b}$
 
 ### Giải thích cách implement bằng NumPy
 - **Vectorization:** Sử dụng `np.dot` và `np.einsum` để thực hiện các phép nhân ma trận thay vì vòng lặp `for`, giúp tăng tốc độ tính toán đáng kể.
